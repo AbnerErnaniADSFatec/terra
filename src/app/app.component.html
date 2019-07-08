@@ -1,0 +1,37 @@
+<div class="container-fluid mapa">
+    <div id = "form" [style.visibility] = "draw_bool ? 'visible' : 'hidden'" >
+        <p-dropdown [options] = "options" (onChange) = "drawFeature()" [(ngModel)] = "option_selected" placeholder = "Select" optionLabel = "verbose">
+        </p-dropdown>
+    </div>
+
+    <div id = "form" [style.visibility] = "coord ? 'visible' : 'hidden'" >
+        <div id = "mouse-position"></div>
+    </div>
+
+    <div id = "form" [style.visibility] = "layer ? 'visible' : 'hidden'" >
+        <input type="text" placeholder="Busca">
+        <button type = "button">Buscar</button>
+    </div>
+
+    <div id = "seletor">
+        <div id = "separador">
+            <h4>Camadas</h4>
+            <table>
+                <tr>
+                    <td>Desenho</td>
+                    <td><p-inputSwitch [(ngModel)] = "draw_bool" (click) = "drawFeature()"></p-inputSwitch></td>
+                </tr>
+                <tr>
+                    <td>Coordenadas</td>
+                    <td><p-inputSwitch [(ngModel)] = "coord"></p-inputSwitch></td>
+                </tr>
+                <tr>
+                    <td>Layer</td>
+                    <td><p-inputSwitch [(ngModel)] = "layer" (click) = "setLayer()"></p-inputSwitch></td>
+                </tr>
+            </table>
+            <div id = "info" >&nbsp;</div>
+        </div>
+    </div>
+    <div id = "map" class = "map"></div>
+</div>
