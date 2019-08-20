@@ -5,6 +5,17 @@
 ```
 ng new MyFirstWebGis
 ```
+## -> Run this command on app root folder
+### This command is to read default styles for your application
+```
+npm install primeng --save
+npm install primeicons --save
+```
+## -> One more command
+### VirtualScrolling enabled Dropdown depends on @angular/cdk's ScrollingModule so begin with installing CDK if not already installed.
+```
+npm install @angular/cdk --save
+```
 ## -> Go to the folder created by last command
 ### Modify the angular.json to this code
 ```
@@ -18,17 +29,6 @@ ng new MyFirstWebGis
 "scripts": [
   "node_modules/chart.js/dist/Chart.js"
 ]
-```
-## -> Run this command on app root folder
-### This command is to read default styles for your application
-```
-npm install primeng --save
-npm install primeicons --save
-```
-## -> One more command
-### VirtualScrolling enabled Dropdown depends on @angular/cdk's ScrollingModule so begin with installing CDK if not already installed.
-```
-npm install @angular/cdk --save
 ```
 ## -> Include the modules for control web map
 ### Go to app.module.ts and modify the imports to your browser
@@ -100,10 +100,10 @@ this.map = new Map({
 #### With the following command run the application on your choice port, by default is localhost:4200
 #### This command run a live programing reports
 ```
-ng serve --port 1212
+ng serve --port 1212 --open
 ```
 #### or by default
 ```
-ng serve
+ng serve --open
 ```
 #### Now enjoy your first WebGIS
