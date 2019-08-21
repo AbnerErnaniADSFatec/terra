@@ -58,7 +58,9 @@ imports: [
 ```
 import Map from 'ol/Map.js';
 import View from 'ol/View.js';
+import OSM from 'ol/source/OSM';
 import TileWMS from 'ol/source/TileWMS';
+import TileLayer from 'ol/layer/Tile.js';
 import { defaults as defaultControls } from 'ol/control.js';
 ```
 ## -> The Open Street Map
@@ -74,8 +76,13 @@ this.osm = new TileLayer({
 });
 ```
 ## -> Create a global variable with name MAP
-### Write this code to create a new map
+### Write this code to create a new map with a view
 ```
+var view = new View({
+  center: [-6124801.2015023, -1780692.0106836],
+  zoom: 4
+});
+
 this.map = new Map({
       controls: defaultControls(),
       layers: this.osm,
