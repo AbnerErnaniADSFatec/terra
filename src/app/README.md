@@ -85,7 +85,7 @@ var view = new View({
 
 this.map = new Map({
       controls: defaultControls(),
-      layers: this.osm,
+      layers: [this.osm],
       target: 'map',
       view: view
 });
