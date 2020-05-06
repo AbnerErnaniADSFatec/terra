@@ -107,7 +107,7 @@ export class AppComponent {
       document.getElementById('info').innerHTML = '';
       var viewResolution = view.getResolution();
       var viewProjection = view.getProjection();
-      var url = camada.getSource().getGetFeatureInfoUrl(
+      var url = camada.getSource().getFeatureInfoUrl(
         event.coordinate, viewResolution, viewProjection,
         "EPSG:4326",
         { 'INFO_FORMAT' : 'text/javascript', 'propertyName' : 'formal_en' }
